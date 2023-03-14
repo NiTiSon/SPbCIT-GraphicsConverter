@@ -1,0 +1,44 @@
+﻿<Window x:Class="SPbCIT.NiTiSon.GraphicsConverter.MainWindow"
+		xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+		xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+		xmlns:svg="http://sharpvectors.codeplex.com/runtime/"
+		xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+		xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+		xmlns:local="clr-namespace:SPbCIT.NiTiSon.GraphicsConverter"
+		mc:Ignorable="d"
+		Height="515" Width="800"
+		ResizeMode="NoResize"
+		Title="Convert svg to png"
+		>
+	<Grid>
+		<svg:ZoomPanControl
+			x:Name="zoomPan"
+			Width="400px"
+			Margin="45,45,0,45"
+			Background="Black"
+			HorizontalAlignment="Left">
+				<svg:SvgDrawingCanvas
+				x:Name="canvas"
+				/>
+		</svg:ZoomPanControl>
+
+		<Button
+			x:Name="convert"
+			Click="ConvertButtonClick"
+			VerticalAlignment="Bottom"
+			Margin="490,0,45,45"
+			Height="40"
+			Content="Convert"
+			FontSize="20px"
+			/>
+		<Button
+			x:Name="openFile"
+			Click="SelectButtonClick"
+			VerticalAlignment="Bottom"
+			Margin="490,0,45,100"
+			Height="40"
+			Content="Open File"
+			FontSize="20px"
+			/>
+	</Grid>
+</Window>
